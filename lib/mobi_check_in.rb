@@ -108,7 +108,7 @@ module MobiCheckIn
     if Git.local_commits == ""
       puts "You have no unpushed commits to amend to"
     else
-      command = "git commit --amend -C HEAD"
+      command = "git commit --amend --reuse-message HEAD"
       system(command)
     end
   end
